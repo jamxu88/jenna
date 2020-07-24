@@ -292,4 +292,4 @@ if (message.content.toLowerCase().startsWith("weather in ")) {
         }
     }
 });
-client.login("NDE2NzczMDY4NTk4MjgwMTky.XxCxZw.PjA4PVRVcAsziIIyH6Eu0WnbsW8");
+client.login(bot_token);
