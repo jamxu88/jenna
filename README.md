@@ -24,6 +24,7 @@
 * Rock, Paper, Scissors
 * Magic 8 Ball (Ask Jenna)
 * Calculator
+* Image Search
 * Some hidden features ;)
 ## Under Development
 * Fighting Game
