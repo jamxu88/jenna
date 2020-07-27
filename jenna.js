@@ -5,6 +5,8 @@ const client = new Discord.Client();
 const calc = require('mathjs');
 var Dictionary = require("oxford-dictionary-api");
 const jconfig = require('./jconfig.json');
+var cheerio = require("cheerio");
+var request = require("request")
 //Console Log-------------------
 client.on("ready", () => {
   console.log("Jenna Bot Online");
@@ -49,13 +51,45 @@ client.on("message", (message) => {
     if (message.content.toLowerCase().startsWith("jhelp")) {
         message.channel.send({
             "embed": {
-                "description": "**Commands**: \n **m:**- Mock Case/Randomized Caps text \n **embed:**- Send an embeded message \n **jping**- Jenna's API ping \n **weather in**- Weather by zip code \n **fight [@user]**- Play a fighting game with someone (under development) \n **flip a coin**- Flip a coin (duh) \n **roll a dice**- Roll a dice \n **rock**, **paper**, **scissors**- Play rock paper scissors (Yes, it is random) \n **jenna,**- Ask Jenna a question \n **number between `x` and `y`**- Pick a random number between two numbers \n **jenna hentai pls**- Some super cool Jenna hentai \n **calc,calc help**- Have Jenna do your math homework",
+                "description": "**Commands**: \n **m:**- Mock Case/Randomized Caps text \n **embed:**- Send an embeded message \n **jping**- Jenna's API ping \n **weather in**- Weather by zip code \n **fight [@user]**- Play a fighting game with someone (under development) \n **flip a coin**- Flip a coin (duh) \n **roll a dice**- Roll a dice \n **rock**, **paper**, **scissors**- Play rock paper scissors (Yes, it is random) \n **jenna,**- Ask Jenna a question \n **number between `x` and `y`**- Pick a random number between two numbers \n **jenna hentai pls**- Some super cool Jenna hentai \n **calc,calc help**- Have Jenna do your math homework \n **img**: Image Search",
                 "url": "https://discordapp.com",
                 "color": 16761035,
                 "thumbnail": {"url": "https://cdn.discordapp.com/attachments/306960397922205696/720838830264942672/2286f2bf03d5ced8a539a5a4ae85aeff.jpg"},
                 "author": {"name": "Help- Jenna was last updated on 7/27/2020"}
             }
         });
+    }else
+    //Image Search Function-----------------
+    function imagesearch(message, parts) {
+        var search = parts.slice(1).join(" ");
+        var options = {
+            url: "http://results.dogpile.com/serp?qc=images&q=" + search,
+            method: "GET",
+            headers: {"Accept": "text/html","User-Agent": "Chrome"}
+        };
+        request(options, function(error, response, responseBody) {
+            if (error) {
+                message.channel.send({ embed: { color: 16761035, description: "Something went wrong (Google probably knew I was a bot :smile:)" } });
+                return;
+            }
+            $ = cheerio.load(responseBody);
+            var links = $(".image a.link");
+            var urls = new Array(links.length).fill(0).map((v, i) => links.eq(i).attr("href"));
+            if (!urls.length) {
+                message.channel.send({ embed: { color: 16761035, description: "There were no results." } });
+                return;
+            }
+            message.channel.send(urls[0]);
+        });
+    }
+    if (message.content.toLowerCase().startsWith("img")) {
+        message.channel.send({ embed: { color: 16761035, description: "Retrieving Picture... this may take a few seconds." } })
+        .then(msg => {
+            msg.delete(2500)
+          })
+          .catch(console.error);
+        var parts = message.content.split(" ")
+        imagesearch(message, parts);
     }else
     //Ping Command-------------------
     if (message.content.toLowerCase().startsWith("jping")) {
