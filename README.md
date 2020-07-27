@@ -1,2 +1,2 @@
 # jenna
-An extensive Discord.js bot with constant updates and new features
+The ultimate extensive Discord Bot tailored to Self-Botting and Group Chats
