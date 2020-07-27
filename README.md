@@ -4,6 +4,11 @@
 * Created by jam#3515 or jamxu88 on github
 * Lightweight, easy to host and setup
 * Made in Discord.js
+## Dependencies
+* [Discord.js](https://www.npmjs.com/package/discord.js) (Version 11.5 or earlier for self-bots, self-bots are depreciated in version 11.6 and later)
+* [Fetch](https://www.npmjs.com/package/fetch)
+* [Math.js](https://www.npmjs.com/package/mathjs)
+* [Oxford Dictionary API](https://www.npmjs.com/package/oxford-dictionary-api) (Not known to function, used in under development non-functional define command)
 ## Features 
 * Weather Command (US Zipcodes)
 * GC/Server Logging
