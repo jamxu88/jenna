@@ -62,6 +62,10 @@ client.on("message", (message) => {
         responsetime = (new Date().getTime() - message.createdTimestamp)
         message.channel.send({ embed: { color: 16761035, description: " Response Time: `" + responsetime + "` ms- This is completely wrong lol, yes I am online." } });
     }else
+    //Github Page
+    if (message.content.toLowerCase().startsWith("jenna code")) {
+        message.channel.send({ embed: { color: 16761035, description: "Jenna's Source Code- https://github.com/jamxu88/jenna" } });
+    }else
     //How old?-------------------
     if (message.content.toLowerCase() == ("jenna how old are you")) {
         message.channel.send({ embed: { color: 16761035, description: "im as old as you want me to be :wink:" } })
