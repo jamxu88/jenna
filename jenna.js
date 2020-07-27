@@ -1,13 +1,7 @@
 //Dependencies-------------------
-//Some dependencies are no longer required, but still kept because I'm lazy and for futureproofing
 const Discord = require("discord.js");
 const fetch = require("node-fetch");
 const client = new Discord.Client();
-var cheerio = require("cheerio");
-var request = require("request");
-const fs = require('fs');
-const readline = require('readline');
-const { google } = require('googleapis');
 const calc = require('mathjs');
 var Dictionary = require("oxford-dictionary-api");
 const jconfig = require('./jconfig.json');
