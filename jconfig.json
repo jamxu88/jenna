@@ -1,0 +1,8 @@
+{
+	"token": "your token",
+	"askjennalist": ["yes","no","maybe","it is certain","it is decidedly so","without a doubt","yes – definitely","you may rely on it","most likely","idk","don't count on it","outlook not so good","very doubtful","not so sure buddy"],
+    "dictID": "dictionary id",
+    "dictAppKey": "dictionary app key",
+    "logServerID": "server id",
+    "jennaID": "bot user id"
+}
