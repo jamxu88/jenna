@@ -50,11 +50,11 @@ client.on("message", (message) => {
     if (message.content.toLowerCase().startsWith("jhelp")) {
         message.channel.send({
             "embed": {
-                "description": "**Commands**: \n **m:**- Mock Case/Randomized Caps text \n **embed:**- Send an embeded message \n **jping**- Jenna's API ping \n **weather in**- Weather by zip code \n **fight [@user]**- Play a fighting game with someone (under development) \n **flip a coin**- Flip a coin (duh) \n **roll a dice**- Roll a dice \n **rock**, **paper**, **scissors**- Play rock paper scissors (Yes, it is random) \n **jenna,**- Ask Jenna a question \n **number between `x` and `y`**- Pick a random number between two numbers \n **jenna hentai pls**- Some super cool Jenna hentai \n **calc,calc help**- Have Jenna do your math homework \n **img**: Image Search \n **jenna code**: View the source code and how to host your own version!",
+                "description": "**Commands**: \n **m:**- Mock Case/Randomized Caps text \n **embed:**- Send an embeded message \n **jping**- Jenna's API ping \n **weather in**- Weather by zip code \n **fight [@user]**- Play a fighting game with someone (Uunder Development) \n **flip a coin**- Flip a coin (duh) \n **roll a dice**- Roll a dice \n **rock**, **paper**, **scissors**- Play rock paper scissors (Yes, it is random) \n **jenna,**- Ask Jenna a question \n **number between `x` and `y`**- Pick a random number between two numbers \n **jenna hentai pls**- Some super cool Jenna hentai \n **calc,calc help**- Have Jenna do your math homework \n **img**: Image Search (Under Development) \n **jenna code**: View the source code and how to host your own version! \n **pfp `@user`**: Retrieve the profile picture of the specified user",
                 "url": "https://discordapp.com",
                 "color": 16761035,
                 "thumbnail": {"url": "https://cdn.discordapp.com/attachments/729757758332862535/737422906774126663/03387e22311e8dab20cd3eb23f212283_1.png"},
-                "author": {"name": "Help- Jenna was last updated on 7/27/2020"}
+                "author": {"name": "Help- Jenna was last updated on 7/28/2020"}
             }
         });
     }else
