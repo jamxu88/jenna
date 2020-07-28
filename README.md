@@ -56,6 +56,7 @@
 * Support Ticket System
 * Music bot
 * Fully customizable
+### If you really want to follow Jenna's development, you can view the testnet in this server https://discord.gg/KPaf6en
 ## Known Issues (GC-Bot)
 * Bot crashes upon Group Chat name change or picture change (TypeError: channelClass is not a constructor)
 * Bot crashes when attempting to send a direct message to non-friend users (DiscordAPIError: Cannot send messages to this user)
