@@ -64,6 +64,7 @@
 * Bot crashes upon Group Chat name change or picture change (TypeError: channelClass is not a constructor)
 * Bot crashes when attempting to send a direct message to non-friend users (DiscordAPIError: Cannot send messages to this user)
 * Other misc. self-bot restrictions
+* **Bot crash issues can be solved easily through PM2 hosting or self-restarting dynos.**
 ## Known Server-Only Issues
 * None :)
 ## Self Installation
