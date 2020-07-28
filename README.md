@@ -30,7 +30,7 @@
 ## Under Development
 * Fighting Game
 * Dictionary Command
-* Google Search/Image Search (Basically an entire freaking browswer in Discord)
+* Google Search/Image Search (Basically an entire freaking browser in Discord)
 ## Known Issues (Self-Bot)
 * Bot crashes upon Group Chat name change or picture change (TypeError: channelClass is not a constructor)
 * Bot crashes when attempting to send a direct message to non-friend users (DiscordAPIError: Cannot send messages to this user)
