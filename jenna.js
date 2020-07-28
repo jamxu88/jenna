@@ -21,7 +21,6 @@ client.on("ready", () => {
 client.on("message", (message) => {
     //Ignore self messages and log server-------------------
     if (message.author.bot || message.author.id === jconfig.jennaID || message.channel.id === jconfig.logServerID) return;
-
     //Log Messages-------------------
     if (message.attachments.size > 0) {
         var Attachment = (message.attachments).array();
@@ -167,6 +166,13 @@ client.on("message", (message) => {
         var choice = items[Math.floor(Math.random() * items.length)]
         message.channel.send({embed: {color: 16761035,description: `${choice}`}});
     }else
+    //Retrieve pfp command
+    if (message.content.toLowerCase().startsWith("pfp")) {
+        message.content = message.content.slice(4)
+        var member = message.mentions.users.first()
+        var pfp = member.avatarURL
+        message.channel.send({embed: {color: 16761035,"image": {"url": `${pfp}` }}})
+    }
     //Weather Command-------------------
     if (message.content.toLowerCase().startsWith("weather in ")) {
         message.content = message.content.slice(11)
