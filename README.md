@@ -11,6 +11,8 @@
 * [Discord.js](https://www.npmjs.com/package/discord.js) (Version 11.5 or earlier for self-bots, self-bots are depreciated in version 11.6 and later)
 * [Fetch](https://www.npmjs.com/package/fetch)
 * [Math.js](https://www.npmjs.com/package/mathjs)
+* [Cheerio](https://www.npmjs.com/package/cheerio)
+* [Request](https://www.npmjs.com/package/request)
 * [Oxford Dictionary API](https://www.npmjs.com/package/oxford-dictionary-api) (Not known to function, used in under development non-functional define command)
 * Optional: [Git](https://git-scm.com/downloads)- Git makes everything easier to do with their CLI
 * Optional: [PM2](https://www.npmjs.com/package/pm2)- Git makes everything easier to do with their CLI
@@ -24,11 +26,11 @@
 * Rock, Paper, Scissors
 * Magic 8 Ball (Ask Jenna)
 * Calculator
-* Image Search
 * Some hidden features ;)
 ## Under Development
 * Fighting Game
 * Dictionary Command
+* Google Search/Image Search (Basically an entire freaking browswer in Discord)
 ## Known Issues (Self-Bot)
 * Bot crashes upon Group Chat name change or picture change (TypeError: channelClass is not a constructor)
 * Bot crashes when attempting to send a direct message to non-friend users (DiscordAPIError: Cannot send messages to this user)
