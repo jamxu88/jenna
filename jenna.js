@@ -83,7 +83,7 @@ client.on("message", (message) => {
         });
     }
     if (message.content.toLowerCase().startsWith("img")) {
-        message.channel.send({ embed: { color: 16761035, description: "Redoing this function, so it won't be useful for a while :)" } }) return;
+        message.channel.send({ embed: { color: 16761035, description: "Redoing this function, so it won't be useful for a while :)" } }); return;
         message.channel.send({ embed: { color: 16761035, description: "Retrieving Picture... this may take a few seconds." } })
         .then(msg => {
             msg.delete(2500)
