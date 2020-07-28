@@ -40,6 +40,8 @@
   * Roulette
   * Yahtzee
   * Slots
+* Food/Recipe Lookup **UD**
+  * Nutrition, full recipes
 ## A server only tailored version of Jenna is under development
 ### Jenna for servers will be released once the fighting game is completed.
 ### Jenna for servers will also be donation supported and non-open source.
@@ -57,6 +59,7 @@
 * Music bot
 * Fully customizable
 ### If you really want to follow Jenna's development, you can view the testnet in this server https://discord.gg/KPaf6en
+### Jenna has a 1 man development team. Please be patient with feature releases.
 ## Known Issues (GC-Bot)
 * Bot crashes upon Group Chat name change or picture change (TypeError: channelClass is not a constructor)
 * Bot crashes when attempting to send a direct message to non-friend users (DiscordAPIError: Cannot send messages to this user)
