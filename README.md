@@ -26,17 +26,43 @@
 * Rock, Paper, Scissors
 * Magic 8 Ball (Ask Jenna)
 * Calculator
+* PFP Retrieval
 * Some hidden features ;)
-## Under Development
-* Fighting Game
-* Dictionary Command
-* Google Search/Image Search (Basically an entire freaking browser in Discord)
-## Known Issues (Self-Bot)
+## Under Development/Possible Future Features
+* Fighting Game **UD**
+* Dictionary Command **UD**
+* Google Search/Image Search **UD**
+* MyAnimeList Search **PFF**
+* Urban Dictionary **PFF**
+* Chess **PFF**
+* Gambling Commands **PFF**
+  * Blackjack
+  * Roulette
+  * Yahtzee
+  * Slots
+## A server only tailored version of Jenna is under development
+### Jenna for servers will be released once the fighting game is completed.
+### Jenna for servers will also be donation supported and non-open source.
+**Server Only Features**:
+* Moderation Commands
+* Purgatory/Verification Channel/Anti-Bot/Anti-Raid
+  * Basic Captcha
+  * Application Settings
+* Global fighting stats
+  * With economy
+* [Reddicord](https://github.com/jamxu88/Reddicord)
+* Do Not Disturb
+* AdminAlert
+* Support Ticket System
+* Music bot
+* Fully customizable
+## Known Issues (GC-Bot)
 * Bot crashes upon Group Chat name change or picture change (TypeError: channelClass is not a constructor)
 * Bot crashes when attempting to send a direct message to non-friend users (DiscordAPIError: Cannot send messages to this user)
-## Known General Issues
-* Random unhandled error events, usually network related- this issue can be solved by hosting the bot on [PM2](https://github.com/Unitech/pm2)
-## Installation
+* Other misc. self-bot restrictions
+## Known Server-Only Issues
+* None :)
+## Self Installation
 * First, Download jconfig.json and jenna.js
 * Next, you need to configure jconfig.json
   * I can't tell you to self-bot... so uh head over to https://discord.com/developers/ and make a new application and bot
@@ -48,6 +74,7 @@
   * `jennaID` should be the Client ID found in your Developer Application ![Dev App](https://cdn.discordapp.com/attachments/729757758332862535/737422836712603698/unknown.png)
 * Now you're ready to begin the hosting process. Install the [dependencies](https://github.com/jamxu88/jenna#dependencies).
 * Make sure jenna.js, jconfig.json, and your node modules are in the same folder
+* Invite your bot to your server- use https://discordapi.com/permissions.html to generate an invite link.
 * For PM2- `pm2 start jenna.js`
 * For Stock Node- `node jenna.js`
 * **And you're done!**
