@@ -29,9 +29,9 @@
 * PFP Retrieval
 * Some hidden features ;)
 ## Under Development/Possible Future Features
-* Fighting Game **UD**
-* Dictionary Command **UD**
-* Google Search/Image Search **UD**
+* Fighting Game **UD, no eta.**
+* Dictionary Command **UD, no eta.**
+* ~~Google Search/Image Search~~ **Discontinued**
 * MyAnimeList Search **PFF**
 * Urban Dictionary **PFF**
 * Chess **PFF**
@@ -40,10 +40,10 @@
   * Roulette
   * Yahtzee
   * Slots
-* Food/Recipe Lookup **UD**
+* Food/Recipe Lookup **UD, eta. Aug.**
   * Nutrition, full recipes
 ## A server only tailored version of Jenna is under development
-### Jenna for servers will be released once the fighting game is completed.
+### ETA: 2021 Q1
 ### Jenna for servers will also be donation supported and non-open source.
 **Server Only Features**:
 * Moderation Commands
