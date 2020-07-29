@@ -15,6 +15,7 @@
 * [Cheerio](https://www.npmjs.com/package/cheerio)
 * [Request](https://www.npmjs.com/package/request)
 * [Oxford Dictionary API](https://www.npmjs.com/package/oxford-dictionary-api) (Not known to function, used in under development non-functional define command)
+* [urban-dictionary](https://www.npmjs.com/package/urban-dictionary)
 * Optional: [Git](https://git-scm.com/downloads)- Git makes everything easier to do with their CLI
 * Optional: [PM2](https://www.npmjs.com/package/pm2)- Git makes everything easier to do with their CLI
 ## Features 
@@ -29,9 +30,9 @@
 * Calculator
 * PFP Retrieval
 * Some hidden features ;)
+* Urban Dictionary Lookup
 ## Under Development/Possible Future Features
 * **ETA August Features:**
-  * Urban Dictionary
   * Food/Recipe Lookup
     * Nutrition, full recipes
   * Stock market viewer
