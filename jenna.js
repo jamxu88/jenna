@@ -7,6 +7,7 @@ var Dictionary = require("oxford-dictionary-api");
 const jconfig = require('./jconfig.json');
 var cheerio = require("cheerio");
 var request = require("request")
+const urbandictionary = require("urban-dictionary")
 //Console Log-------------------
 client.on("ready", () => {
   console.log("Jenna Bot Online");
@@ -51,7 +52,7 @@ client.on("message", (message) => {
     if (message.content.toLowerCase().startsWith("jhelp")) {
         message.channel.send({
             "embed": {
-                "description": "**Commands**: \n **m:**- Mock Case/Randomized Caps text \n **embed:**- Send an embeded message \n **jping**- Jenna's API ping \n **weather in**- Weather by zip code \n **fight [@user]**- Play a fighting game with someone (Uunder Development) \n **flip a coin**- Flip a coin (duh) \n **roll a dice**- Roll a dice \n **rock**, **paper**, **scissors**- Play rock paper scissors (Yes, it is random) \n **jenna,**- Ask Jenna a question \n **number between `x` and `y`**- Pick a random number between two numbers \n **jenna hentai pls**- Some super cool Jenna hentai \n **calc, calc help**- Have Jenna do your math homework \n **img**: Image Search (Under Development) \n **jenna code**: View the source code and how to host your own version! \n **pfp [@user]**: Retrieve the profile picture of the specified user",
+                "description": "**Commands**: \n **m:**- Mock Case/Randomized Caps text \n **embed:**- Send an embeded message \n **jping**- Jenna's API ping \n **weather in**- Weather by zip code \n **fight [@user]**- Play a fighting game with someone (Uunder Development) \n **flip a coin**- Flip a coin (duh) \n **roll a dice**- Roll a dice \n **rock**, **paper**, **scissors**- Play rock paper scissors (Yes, it is random) \n **jenna,**- Ask Jenna a question \n **number between `x` and `y`**- Pick a random number between two numbers \n **jenna hentai pls**- Some super cool Jenna hentai \n **calc, calc help**- Have Jenna do your math homework \n **jenna code**: View the source code and how to host your own version! \n **pfp [@user]**: Retrieve the profile picture of the specified user \n **urban [term]**: Lookup a word on Urban Dictionary",
                 "url": "https://discordapp.com",
                 "color": 16761035,
                 "thumbnail": {"url": "https://cdn.discordapp.com/attachments/729757758332862535/737422906774126663/03387e22311e8dab20cd3eb23f212283_1.png"},
@@ -59,43 +60,21 @@ client.on("message", (message) => {
             }
         });
     }else
-    //Image Search Function-----------------
-    function imagesearch(message, parts) {
-        var search = parts.slice(1).join(" ");
-        var options = {
-            url: "https://serpapi.com/playground?q="+search+"&tbm=isch&ijn=0",
-            method: "GET",
-            headers: {"Accept": "text/html","User-Agent": "Chrome"}
-        };
-        request(options, function(error, response, responseBody) {
-            if (error) {
-                message.channel.send({ embed: { color: 16761035, description: "Something went wrong (Google probably knew I was a bot :smile:)" } });
-                return;
-            }
-            $ = cheerio.load(responseBody);
-            var links = $(".image a.link");
-            var urls = new Array(links.length).fill(0).map((v, i) => links.eq(i).attr("href"));
-            if (!urls.length) {
-                message.channel.send({ embed: { color: 16761035, description: "There were no results." } });
-                return;
-            }
-            message.channel.send(urls[0]);
-        });
-    }
-    if (message.content.toLowerCase().startsWith("img")) {
-        message.channel.send({ embed: { color: 16761035, description: "Redoing this function, so it won't be useful for a while :)" } }); return;
-        message.channel.send({ embed: { color: 16761035, description: "Retrieving Picture... this may take a few seconds." } })
-        .then(msg => {
-            msg.delete(2500)
-          })
-          .catch(console.error);
-        var parts = message.content.split(" ")
-        imagesearch(message, parts);
-    }else
     //Ping Command-------------------
     if (message.content.toLowerCase().startsWith("jping")) {
         responsetime = (new Date().getTime() - message.createdTimestamp)
         message.channel.send({ embed: { color: 16761035, description: " Response Time: `" + responsetime + "` ms- This is completely wrong lol, yes I am online." } });
+    }else
+    //Urban Dictionary-------------------
+    if (message.content.toLowerCase().startsWith("urban")) {
+        message.content = message.content.slice(5)
+        urbandictionary.term(message.content, (error,entries,tags,sounds) => {
+            if (error) {
+                message.channel.send({ embed: { color: 16761035, description: `Something went wrong: ${error}` } })
+            }else {
+                message.channel.send({embed: { color: 16761035, description: `**${entries[0].word}** \n ${entries[0].definition} \n ${entries[0].example}`}})
+            }
+        })
     }else
     //Github Page
     if (message.content.toLowerCase().startsWith("jenna code")) {
