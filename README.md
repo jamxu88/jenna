@@ -29,20 +29,28 @@
 * PFP Retrieval
 * Some hidden features ;)
 ## Under Development/Possible Future Features
-* Fighting Game **UD, no eta.**
-* Dictionary Command **UD, no eta.**
-* ~~Google Search/Image Search~~ **Discontinued for now.**
-* MyAnimeList Search **PFF**
-* Urban Dictionary **PFF**
-* Chess **PFF**
+* **ETA August Features:**
+  * Urban Dictionary
+  * Food/Recipe Lookup
+    * Nutrition, full recipes
+  * Stock market viewer
+  * Polling
+* **No ETA Features**
+  * Fighting Game
+  * Dictionary Command
+  * MyAnimeList Search **UD**
+  * Gify/Tenor GIFs
+* **Possible Future Features**
+  * Chess **PFF**
 * Gambling Commands **PFF**
   * Blackjack
   * Roulette
   * Yahtzee
   * Slots
-* Food/Recipe Lookup **UD, eta. Aug.**
-  * Nutrition, full recipes
-## A server only tailored version of Jenna is under development
+* **Abandoned Features**
+  * Google Search/Image Search
+  * GC Music Bot
+## A server only tailored version of Jenna is under development- With all GC features + more
 ### ETA: 2021 Q1
 ### Jenna for servers will also be donation supported and non-open source.
 **Server Only Features**:
