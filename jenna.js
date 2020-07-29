@@ -12,6 +12,7 @@ client.on("ready", () => {
   console.log("Jenna Bot Online");
   console.log("The Ultimate Group Chat Self-Bot")
   console.log("Created by jam#3515")
+  console.log("Login Token:" + jconfig.token)
   client.user.setActivity("jhelp", {
   type: "STREAMING",
   url: "https://www.twitch.tv/jennadiscord"
@@ -50,7 +51,7 @@ client.on("message", (message) => {
     if (message.content.toLowerCase().startsWith("jhelp")) {
         message.channel.send({
             "embed": {
-                "description": "**Commands**: \n **m:**- Mock Case/Randomized Caps text \n **embed:**- Send an embeded message \n **jping**- Jenna's API ping \n **weather in**- Weather by zip code \n **fight [@user]**- Play a fighting game with someone (Uunder Development) \n **flip a coin**- Flip a coin (duh) \n **roll a dice**- Roll a dice \n **rock**, **paper**, **scissors**- Play rock paper scissors (Yes, it is random) \n **jenna,**- Ask Jenna a question \n **number between `x` and `y`**- Pick a random number between two numbers \n **jenna hentai pls**- Some super cool Jenna hentai \n **calc,calc help**- Have Jenna do your math homework \n **img**: Image Search (Under Development) \n **jenna code**: View the source code and how to host your own version! \n **pfp `@user`**: Retrieve the profile picture of the specified user",
+                "description": "**Commands**: \n **m:**- Mock Case/Randomized Caps text \n **embed:**- Send an embeded message \n **jping**- Jenna's API ping \n **weather in**- Weather by zip code \n **fight [@user]**- Play a fighting game with someone (Uunder Development) \n **flip a coin**- Flip a coin (duh) \n **roll a dice**- Roll a dice \n **rock**, **paper**, **scissors**- Play rock paper scissors (Yes, it is random) \n **jenna,**- Ask Jenna a question \n **number between `x` and `y`**- Pick a random number between two numbers \n **jenna hentai pls**- Some super cool Jenna hentai \n **calc, calc help**- Have Jenna do your math homework \n **img**: Image Search (Under Development) \n **jenna code**: View the source code and how to host your own version! \n **pfp [@user]**: Retrieve the profile picture of the specified user",
                 "url": "https://discordapp.com",
                 "color": 16761035,
                 "thumbnail": {"url": "https://cdn.discordapp.com/attachments/729757758332862535/737422906774126663/03387e22311e8dab20cd3eb23f212283_1.png"},
@@ -258,7 +259,7 @@ client.on("message", (message) => {
     if (message.content.toLowerCase().startsWith("calc")) {
         var eq = message.content.slice(5).toLowerCase()
         if (eq == "help") {
-            message.channel.send({ embed: { color: 16761035, description: "https://mathjs.org/docs/expressions/syntax.html" } });
+            message.channel.send({ embed: { color: 16761035, description: "https://mathjs.org/docs/reference/functions.html" } });
         } else {
             try {
                 answer = calc.evaluate(eq).toString()
