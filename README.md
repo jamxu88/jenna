@@ -68,18 +68,25 @@
 ## Known Server-Only Issues
 * None :)
 ## Self Installation
-* First, Download jconfig.json and jenna.js
+* First, Download jconfig.json and jenna.js from the [releases page](https://github.com/jamxu88/jenna/releases).
 * Next, you need to configure jconfig.json
-  * I can't tell you to self-bot... so uh head over to https://discord.com/developers/ and make a new application and bot
+  * I can't tell you to self-bot... so head over to https://discord.com/developers/ and make a new application and bot
 ![Discord Developer Portal](https://cdn.discordapp.com/attachments/729757758332862535/737415172259577987/QAAAABJRU5ErkJggg.png)
   * Create a bot ![Bot Creation](https://cdn.discordapp.com/attachments/729757758332862535/737422656046891053/unknown.png)
   * Where it says `token:` in jconfig.js, enter the token within the quotes.
-  * Right now, the `dictID` and `dictAppKey` are not needed.
+  * Get `dictID` and `dictAppKey` from https://developer.oxforddictionaries.com/
   * `logServerID` should be the channel ID of where you want logged messages to go. To get the channel ID, make sure you're in developer mode ![dev mode](https://cdn.discordapp.com/attachments/729757758332862535/737415741627957306/unknown.png) and right click on the channel and press **Copy ID**
   * `jennaID` should be the Client ID found in your Developer Application ![Dev App](https://cdn.discordapp.com/attachments/729757758332862535/737422836712603698/unknown.png)
 * Now you're ready to begin the hosting process. Install the [dependencies](https://github.com/jamxu88/jenna#dependencies).
+  * Make sure all dependencies are installed in the same location and cd'd to where jenna.js is located.
 * Make sure jenna.js, jconfig.json, and your node modules are in the same folder
 * Invite your bot to your server- use https://discordapi.com/permissions.html to generate an invite link.
-* For PM2- `pm2 start jenna.js`
-* For Stock Node- `node jenna.js`
+### Starting and hosting the bot
+* **For self hosting:**
+* Open a cd to where jenna.js, jconfig.json, and the node modules are located.
+* For PM2- `$ pm2 start jenna.js`
+* For Stock Node- `$ node jenna.js`
+* **Free 24/7 hosting:**
+* [Heroku](https://www.heroku.com/) Offers a free 550 hours of hosting per month for your node apps and 1000 hours if you connect a card to your account.
+* [Tutorial](https://www.youtube.com/watch?v=24zueyPoHMQ)
 * **And you're done!**
