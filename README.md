@@ -31,7 +31,7 @@
 ## Under Development/Possible Future Features
 * Fighting Game **UD, no eta.**
 * Dictionary Command **UD, no eta.**
-* ~~Google Search/Image Search~~ **Discontinued**
+* ~~Google Search/Image Search~~ **Discontinued for now.**
 * MyAnimeList Search **PFF**
 * Urban Dictionary **PFF**
 * Chess **PFF**
