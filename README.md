@@ -5,6 +5,7 @@
 * Updated Regularly
 * Created by jam#3515 or jamxu88 on github
 * Lightweight, easy to host and setup
+  * Est. Memory usage- 60MiB
 * Made in Discord.js
 ## Dependencies
 * [NodeJS and NPM](https://nodejs.org/en/) (Distrubuted Together)
