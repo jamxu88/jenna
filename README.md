@@ -10,7 +10,8 @@
 * Made in Discord.js
 ## Dependencies
 * [NodeJS and NPM](https://nodejs.org/en/) (Distrubuted Together)
-* [Discord.js](https://www.npmjs.com/package/discord.js) (Version 11.5 or earlier for self-bots, self-bots are depreciated in version 11.6 and later)
+* `$ npm install discord.js@11.5.1 fetch math.js cheerio request oxford-dictionary-api urban-dictionary pm2`
+* [Discord.js](https://www.npmjs.com/package/discord.js) (Version 11.5 or earlier for self-bots, self-bots are depreciated in version 11.6 and later.)
 * [Fetch](https://www.npmjs.com/package/fetch)
 * [Math.js](https://www.npmjs.com/package/mathjs)
 * [Cheerio](https://www.npmjs.com/package/cheerio)
