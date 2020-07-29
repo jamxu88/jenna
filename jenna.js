@@ -55,7 +55,7 @@ client.on("message", (message) => {
                 "url": "https://discordapp.com",
                 "color": 16761035,
                 "thumbnail": {"url": "https://cdn.discordapp.com/attachments/729757758332862535/737422906774126663/03387e22311e8dab20cd3eb23f212283_1.png"},
-                "author": {"name": "Help- Jenna was last updated on 7/28/2020"}
+                "author": {"name": "Help- Jenna was last updated on 7/29/2020"}
             }
         });
     }else
