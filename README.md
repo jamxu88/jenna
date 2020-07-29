@@ -38,15 +38,15 @@
 * **No ETA Features**
   * Fighting Game
   * Dictionary Command
-  * MyAnimeList Search **UD**
+  * MyAnimeList Search
   * Gify/Tenor GIFs
 * **Possible Future Features**
-  * Chess **PFF**
-* Gambling Commands **PFF**
-  * Blackjack
-  * Roulette
-  * Yahtzee
-  * Slots
+  * Chess
+  * Gambling Commands
+    * Blackjack
+    * Roulette
+    * Yahtzee
+    * Slots
 * **Abandoned Features**
   * Google Search/Image Search
   * GC Music Bot
