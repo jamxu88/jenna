@@ -51,6 +51,7 @@
 * **Abandoned Features**
   * Google Search/Image Search
   * GC Music Bot
+  * Google Assistant API
 ## A server only tailored version of Jenna is under development- With all GC features + more
 ### ETA: 2021 Q1
 ### Jenna for servers will also be donation supported and non-open source.
