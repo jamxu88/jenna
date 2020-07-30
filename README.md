@@ -59,7 +59,8 @@
   * GC Music Bot
   * Google Assistant API
 ## A server only tailored version of Jenna is under development- With all GC features + more
-### ETA: 2021 Q1
+### Beta ETA: 2021 Q1
+* This will only be the beta version of Jenna for Servers. It will only have a few basic server-only features upon first release.
 ### Jenna for servers will also be donation supported and non-open source.
 **Server Only Features**:
 * Moderation Commands
