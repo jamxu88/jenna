@@ -33,12 +33,15 @@
 * PFP Retrieval
 * Some hidden features ;)
 * Urban Dictionary Lookup
+* Clear Chat
+* Ban List
 ## Under Development/Possible Future Features
 * **ETA August Features:**
   * Food/Recipe Lookup
     * Nutrition, full recipes
   * Stock market viewer
   * Polling
+  * Russian Roulette
 * **No ETA Features**
   * Fighting Game
   * Dictionary Command
