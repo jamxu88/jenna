@@ -112,5 +112,5 @@
 ### BTC: 1NKwF3n4tcyzE5zDhjJSfp13nBN7cHEwsU
 ### ETH: 0x6727B85FD3978a493BC19EA0a456B3a9Ddc290eF
 ### DASH: XebAktYUUhf8BzmK5uFDbfQ6nqbeHG3DSz
-[![https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=JPF6A3T7URF34&item_name=Buy+me+a+coffee+and+support+the+development+of+Jenna&currency_code=USD&source=url](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)]
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=JPF6A3T7URF34&item_name=Buy+me+a+coffee+and+support+the+development+of+Jenna&currency_code=USD&source=url)
 ### Patreon: Coming Soon (with benifits)
