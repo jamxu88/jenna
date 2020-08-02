@@ -52,6 +52,7 @@
   * Gify/Tenor GIFs
 * **Possible Future Features**
   * Chess
+  * Step-by-step AI Math Solver (Wolfram Alpha, Symbolab, etc.)
   * Gambling Commands
     * Blackjack
     * Roulette
