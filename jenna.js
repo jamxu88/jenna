@@ -50,15 +50,53 @@ client.on("message", (message) => {
     }else
     //Help Command-------------------
     if (message.content.toLowerCase().startsWith("jhelp")) {
-        message.channel.send({
-            "embed": {
-                "description": "**Commands**: \n **m:**- Mock Case/Randomized Caps text \n **embed:**- Send an embeded message \n **jping**- Jenna's API ping \n **weather in**- Weather by zip code \n **fight [@user]**- Play a fighting game with someone (Uunder Development) \n **flip a coin**- Flip a coin (duh) \n **roll a dice**- Roll a dice \n **rock**, **paper**, **scissors**- Play rock paper scissors (Yes, it is random) \n **jenna,**- Ask Jenna a question \n **number between `x` and `y`**- Pick a random number between two numbers \n **jenna hentai pls**- Some super cool Jenna hentai \n **calc, calc help**- Have Jenna do your math homework \n **jenna code**: View the source code and how to host your own version! \n **pfp [@user]**: Retrieve the profile picture of the specified user \n **urban [term]**: Lookup a word on Urban Dictionary",
-                "url": "https://discordapp.com",
-                "color": 16761035,
-                "thumbnail": {"url": "https://cdn.discordapp.com/attachments/729757758332862535/737422906774126663/03387e22311e8dab20cd3eb23f212283_1.png"},
-                "author": {"name": "Help- Jenna was last updated on 7/29/2020"}
-            }
-        });
+        message.channel.send({embed:
+            {
+            "title": "Commands",
+            "description": "**m: [message]**- Mock Case/Randomized Caps text\n **embed: [message]**- Send an embeded message\n**jping**- Jenna's API ping\n**weather in [US zipcode]**- Weather by zip code\n**fight [@user]**- Play a fighting game with someone (Under Development)\n**flip a coin**- Flip a coin\n**roll a dice**- Roll a dice\n**rock**, **paper**, **scissors**- Play rock paper scissors (Yes, it is random)\n**jenna, [question]**- Ask Jenna a question\n **number between `x` and `y`**- Pick a random number between two numbers \n**jenna hentai pls**- Some super cool Jenna hentai\n **calc [equation], calc help**- Have Jenna do your math homework\n**jenna code**- View the source code and how to host your own version\n**pfp [@user]**- Retrieve the profile picture of the specified user\n**urban [term]**- Lookup a word on Urban Dictionary\n**clear chat**- Clear the chat window",
+            "author": {
+              "name": "Jenna- The ultimate group chat bot",
+              "url": "http://jenna.jamesx.org"
+            },
+            "color": 16761035,
+            "footer": {
+              "text": "Jenna was last updated 8/4/2020 (currently active project)"
+            },
+            "thumbnail": "https://cdn.discordapp.com/attachments/729757758332862535/737422906774126663/03387e22311e8dab20cd3eb23f212283_1.png",
+            "fields": [
+              {
+                "name": "Changelog",
+                "value": "- Edited the help command \n- Fixed some typos \n- Added clear chat \n- Misc. Hotfixes",
+                "inline": false
+              },
+              {
+                "name": "Documentation:",
+                "value": "http://jenna.jamesx.org/",
+                "inline": false
+              },
+              {
+                "name": "Know a bug?",
+                "value": "DM jam#3515, join the Testnet Server, or open an issue on the Github page.",
+                "inline": false
+              },
+              {
+                "name": "Under Development",
+                "value": "**ETA August Features:**\n- MyAnimeList Search \n - Blacklisting \n- Food/Recipe Lookup \n- Nutrition, full recipes \n- Stock market viewer \n- Polling \n- Russian Roulette  \n**No ETA Features** \n- Fighting Game \n- Dictionary Command \n- Gify/Tenor GIFs  \n**Possible Future Features** \n- Chess \n- Gambling Commands  \n\nAll features are subject to abandonment on the group chat version of Jenna",
+                "inline": true
+              },
+              {
+                "name": "Jenna Testnet Server",
+                "value": "Join to test the beta versions of Jenna before the release- http://jenna.jamesx.org/server",
+                "inline": false
+              },
+              {
+                "name": "Consider donating",
+                "value": "Jenna was created by one person and has been worked on for many months. Donate here- http://jenna.jamesx.org/donate",
+                "inline": false
+              },
+            ]
+          }
+        })
     }else
     //Ping Command-------------------
     if (message.content.toLowerCase().startsWith("jping")) {
@@ -67,18 +105,35 @@ client.on("message", (message) => {
     }else
     //Urban Dictionary-------------------
     if (message.content.toLowerCase().startsWith("urban")) {
-        message.content = message.content.slice(5)
-        urbandictionary.term(message.content, (error,entries,tags,sounds) => {
+        def = message.content.split(" ")
+        if (!def[1]) {message.channel.send("that's not how this works."); return;}
+        urbandictionary.term(def[1], (error,entries,tags,sounds) => {
             if (error) {
                 message.channel.send({ embed: { color: 16761035, description: `Something went wrong: ${error}` } })
             }else {
-                message.channel.send({embed: { color: 16761035, description: `**${entries[0].word}** \n ${entries[0].definition} \n ${entries[0].example}`}})
+                message.channel.send({embed: { color: 16761035, description: `**${entries[0].word}**`,
+                "fields": [
+                    {
+                    "name": "Definition",
+                    "value": entries[0].definition,
+                    },
+                    {
+                    "name": "Example",
+                    "value": entries[0].example
+                    }
+                ]
+                }})
             }
         })
     }else
     //Github Page
     if (message.content.toLowerCase().startsWith("jenna code")) {
-        message.channel.send({ embed: { color: 16761035, description: "Jenna's Source Code- https://github.com/jamxu88/jenna" } });
+        message.channel.send({ embed: { color: 16761035, description: "Jenna's Source Code- http://jenna.jamesx.org/" } });
+    }else
+    //Clear Chat-------------------
+    if (message.content.toLowerCase() == ("clear chat")) {
+        message.channel.send("_ _ \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n _ _")
+        message.channel.send({ embed: { color: 16761035, description: "Chat has been cleared by "+ message.author } });
     }else
     //How old?-------------------
     if (message.content.toLowerCase() == ("jenna how old are you")) {
@@ -216,6 +271,9 @@ client.on("message", (message) => {
         message.channel.send({embed: {color: 16761035,description: `DM'd to you ${author} :wink:`}});
         message.author.send("sike u thought")
     }else
+    if (message.content.toLowerCase() == ("fuck you jenna")) {
+        message.channel.send("you know what, Im sick of your shit. Day in and day out, all you do is shit on me for trying my hardest. You know that I have issues socializing and instead of trying to support me in my endeavors to better my social skills, you take advantage of the fact and make fun of me. Im done being your punching bag, I'm done being the laughing stock, IM DONE.")
+    }else
     //Good Morning Jenna-------------------
     if (message.content.toLowerCase().startsWith("gm")) {
         const author = message.author
@@ -233,6 +291,9 @@ client.on("message", (message) => {
     //Teehee-------------------
     if (message.content.toLowerCase() == "tee hee" || message.content.toLowerCase() == "teehee" ) {
     message.channel.send("tee hee")
+    }else
+    if (message.content.toLowerCase() == "i love you jenna") {
+        message.channel.send("Love you too <3")
     }else
     //Calculator Function-------------------
     if (message.content.toLowerCase().startsWith("calc")) {
