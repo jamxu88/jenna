@@ -39,16 +39,16 @@
 * Clear Chat
 ## Under Development/Possible Future Features
 * **ETA August Features:**
-  * Blacklist
+  * Blacklist (Priority)
+  * MyAnimeList Search (Priority)
   * Food/Recipe Lookup
     * Nutrition, full recipes
   * Stock market viewer
-  * Polling
+  * Polling/Voting
   * Russian Roulette
 * **No ETA Features**
   * Fighting Game
   * Dictionary Command
-  * MyAnimeList Search
   * Gify/Tenor GIFs
 * **Possible Future Features**
   * Chess
