@@ -51,7 +51,6 @@
 * **No ETA Features**
   * Fighting Game
   * Dictionary Command
-  * Gify/Tenor GIFs
 * **Possible Future Features**
   * Chess
   * Step-by-step AI Math Solver (Wolfram Alpha, Symbolab, etc.)
@@ -64,6 +63,8 @@
   * Google Search/Image Search
   * GC Music Bot
   * Google Assistant API
+  * Gify/Tenor GIFs
+    * Both desktop and mobile versions of discord now support this in client.
 ## A server only tailored version of Jenna is under development- With all GC features + more
 ### Beta ETA: 2021 Q1
 * This will only be the beta version of Jenna for Servers. It will only have a few basic server-only features upon first release.
