@@ -100,6 +100,7 @@
   * Where it says `token:` in jconfig.js, enter the token within the quotes.
   * Get `dictID` and `dictAppKey` from https://developer.oxforddictionaries.com/
   * `logServerID` should be the channel ID of where you want logged messages to go. To get the channel ID, make sure you're in developer mode ![dev mode](https://cdn.discordapp.com/attachments/729757758332862535/737415741627957306/unknown.png) and right click on the channel and press **Copy ID**
+  * **You must have a log server set up or else the bot will not work. If you don't want one, you must get rid of lines 29-34, and remove `|| message.channel.id === jconfig.logServerID` from line 27.**
   * `jennaID` should be the Client ID found in your Developer Application ![Dev App](https://cdn.discordapp.com/attachments/729757758332862535/737422836712603698/unknown.png)
 * Now you're ready to begin the hosting process. Install the [dependencies](https://github.com/jamxu88/jenna#dependencies).
   * Make sure all dependencies are installed in the same location and cd'd to where jenna.js is located.
