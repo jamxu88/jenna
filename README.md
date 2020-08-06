@@ -41,6 +41,7 @@
 * **ETA August Features:**
   * Blacklist (Priority)
   * MyAnimeList Search (Priority)
+  * Translate
   * Food/Recipe Lookup
     * Nutrition, full recipes
   * Stock market viewer
