@@ -8,6 +8,8 @@ const jconfig = require('./jconfig.json');
 var cheerio = require("cheerio");
 var request = require("request")
 const urbandictionary = require("urban-dictionary")
+const Jikan = require('jikan-node');
+const mal = new Jikan();
 //Console Log-------------------
 client.on("ready", () => {
   console.log("Jenna Bot Online");
@@ -53,25 +55,25 @@ client.on("message", (message) => {
         message.channel.send({embed:
             {
             "title": "Commands",
-            "description": "**m: [message]**- Mock Case/Randomized Caps text\n **embed: [message]**- Send an embeded message\n**jping**- Jenna's API ping\n**weather in [US zipcode]**- Weather by zip code\n**fight [@user]**- Play a fighting game with someone (Under Development)\n**flip a coin**- Flip a coin\n**roll a dice**- Roll a dice\n**rock**, **paper**, **scissors**- Play rock paper scissors (Yes, it is random)\n**jenna, [question]**- Ask Jenna a question\n **number between `x` and `y`**- Pick a random number between two numbers \n**jenna hentai pls**- Some super cool Jenna hentai\n **calc [equation], calc help**- Have Jenna do your math homework\n**jenna code**- View the source code and how to host your own version\n**pfp [@user]**- Retrieve the profile picture of the specified user\n**urban [term]**- Lookup a word on Urban Dictionary\n**clear chat**- Clear the chat window",
+            "description": "**m: [message]**- Mock Case/Randomized Caps text\n **embed: [message]**- Send an embeded message\n**jping**- Jenna's API ping\n**weather in [US zipcode]**- Weather by zip code\n**fight [@user]**- Play a fighting game with someone (Under Development)\n**flip a coin**- Flip a coin\n**roll a dice**- Roll a dice\n**rock**, **paper**, **scissors**- Play rock paper scissors (Yes, it is random)\n**jenna, [question]**- Ask Jenna a question\n **number between `x` and `y`**- Pick a random number between two numbers \n**jenna hentai pls**- Some super cool Jenna hentai\n **calc [equation], calc help**- Have Jenna do your math homework\n**jenna code**- View the source code and how to host your own version\n**pfp [@user]**- Retrieve the profile picture of the specified user\n**urban [term]**- Lookup a word on Urban Dictionary\n**clear chat**- Clear the chat window\n**anime search [anime], manga search [manga]**- Do a MyAnimeList search",
             "author": {
               "name": "Jenna- The ultimate group chat bot",
-              "url": "http://jenna.jamesx.org"
+              "url": "https://jamesxu.dev/jenna"
             },
             "color": 16761035,
             "footer": {
-              "text": "Jenna was last updated 8/4/2020 (currently active project)"
+              "text": "Jenna was last updated 8/5/2020 (currently active project)"
             },
             "thumbnail": "https://cdn.discordapp.com/attachments/729757758332862535/737422906774126663/03387e22311e8dab20cd3eb23f212283_1.png",
             "fields": [
               {
                 "name": "Changelog",
-                "value": "- Edited the help command \n- Fixed some typos \n- Added clear chat \n- Misc. Hotfixes",
+                "value": "- Edited the help command \n- Fixed some typos \n- Added Manga & Anime Search \n- Misc. Hotfixes",
                 "inline": false
               },
               {
                 "name": "Documentation:",
-                "value": "http://jenna.jamesx.org/",
+                "value": "https://jamesxu.dev/jenna",
                 "inline": false
               },
               {
@@ -81,17 +83,17 @@ client.on("message", (message) => {
               },
               {
                 "name": "Under Development",
-                "value": "**ETA August Features:**\n- MyAnimeList Search \n - Blacklisting \n- Food/Recipe Lookup \n- Nutrition, full recipes \n- Stock market viewer \n- Polling \n- Russian Roulette  \n**No ETA Features** \n- Fighting Game \n- Dictionary Command \n- Gify/Tenor GIFs  \n**Possible Future Features** \n- Chess \n- Gambling Commands  \n\nAll features are subject to abandonment on the group chat version of Jenna",
+                "value": "**ETA August Features:**\n - Blacklisting \n- Food/Recipe Lookup \n- Nutrition, full recipes \n- Stock market viewer \n- Polling \n- Russian Roulette  \n**No ETA Features** \n- Fighting Game \n- Dictionary Command \n- MyAnimeList Search \n- Gify/Tenor GIFs  \n**Possible Future Features** \n- Chess \n- Gambling Commands  \n\nAll features are subject to abandonment on the group chat version of Jenna",
                 "inline": true
               },
               {
                 "name": "Jenna Testnet Server",
-                "value": "Join to test the beta versions of Jenna before the release- http://jenna.jamesx.org/server",
+                "value": "Join to test the beta versions of Jenna before the release- https://jamesxu.dev/server",
                 "inline": false
               },
               {
                 "name": "Consider donating",
-                "value": "Jenna was created by one person and has been worked on for many months. Donate here- http://jenna.jamesx.org/donate",
+                "value": "Jenna was created by one person and has been worked on for many months. Donate here- https://jamesxu.dev/donate",
                 "inline": false
               },
             ]
@@ -128,7 +130,85 @@ client.on("message", (message) => {
     }else
     //Github Page
     if (message.content.toLowerCase().startsWith("jenna code")) {
-        message.channel.send({ embed: { color: 16761035, description: "Jenna's Source Code- http://jenna.jamesx.org/" } });
+        message.channel.send({ embed: { color: 16761035, description: "Jenna's Source Code- https://jamesxu.dev/jenna" } });
+    }else
+    //Anime Search-------------------
+    if (message.content.toLowerCase().startsWith("anime search")) {
+        message.content = message.content.slice(12)
+        if (!message.content || message.content == " " || message.content.length < 2) {
+            message.channel.send("You need to specify at least 3 letters to search.")
+            return;
+        }
+        mal.search("anime",message.content,1)
+            .then(info => {
+                if (!info.results[0].end_date) {info.results[0].end_date = "Unknown"}
+                if (!info.results[0].start_date) {info.results[0].start_date = "Unknown"}
+                message.channel.send({"embed": {
+                "title": info.results[0].title.toString(),
+                "description": info.results[0].synopsis,
+                "url": info.results[0].url,
+                "color": 16761035,
+                "thumbnail": {
+                  "url": info.results[0].image_url
+                },
+                "fields": [
+                  {
+                    "name": info.results[0].type,
+                    "value": `Airing: ${info.results[0].airing.toString()} \nRating- ${info.results[0].score.toString()}\nEpisodes- ${info.results[0].episodes.toString()}`
+                  },
+                  {
+                    "name": "Start Date",
+                    "value": info.results[0].start_date.substring(0,10),
+                    "inline": true
+                  },
+                  {
+                    "name": "End Date",
+                    "value": info.results[0].end_date.substring(0,10),
+                    "inline": true
+                  }
+                ]
+              }
+            })})
+            .catch(err => message.channel.send(err));
+    }else
+    //Manga Search-------------------
+    if (message.content.toLowerCase().startsWith("manga search")) {
+        message.content = message.content.slice(12)
+        if (!message.content || message.content == " " || message.content.length < 2) {
+            message.channel.send("You need to specify at least 3 letters to search.")
+            return;
+        }
+        mal.search("manga",message.content,1)
+            .then(info => {
+                if (!info.results[0].end_date) {info.results[0].end_date = "Unknown"}
+                if (!info.results[0].start_date) {info.results[0].start_date = "Unknown"}
+                message.channel.send({"embed": {
+                "title": info.results[0].title.toString(),
+                "description": info.results[0].synopsis,
+                "url": info.results[0].url,
+                "color": 16761035,
+                "thumbnail": {
+                  "url": info.results[0].image_url
+                },
+                "fields": [
+                  {
+                    "name": info.results[0].type,
+                    "value": `Publishing: ${info.results[0].publishing.toString()}\nRating- ${info.results[0].score.toString()}\nChapters- ${info.results[0].chapters.toString()}\nVolumes- ${info.results[0].volumes.toString()}`
+                  },
+                  {
+                    "name": "Start Date",
+                    "value": info.results[0].start_date.substring(0,10),
+                    "inline": true
+                  },
+                  {
+                    "name": "End Date",
+                    "value": info.results[0].end_date.substring(0,10),
+                    "inline": true
+                  }
+                ]
+              }
+            })})
+            .catch(err => message.channel.send(err));
     }else
     //Clear Chat-------------------
     if (message.content.toLowerCase() == ("clear chat")) {
