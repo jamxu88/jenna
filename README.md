@@ -13,7 +13,7 @@
 * Made in Discord.js
 ## Dependencies
 * [NodeJS and NPM](https://nodejs.org/en/) (Distrubuted Together)
-* `$ npm install discord.js@11.5.1 fetch math.js cheerio request oxford-dictionary-api urban-dictionary pm2`
+* `$ npm install discord.js@11.5.1 fetch math.js cheerio request oxford-dictionary-api urban-dictionary pm2 jikan-node`
 * [Discord.js](https://www.npmjs.com/package/discord.js) (Version 11.5 or earlier for self-bots, self-bots are depreciated in version 11.6 and later.)
 * [Fetch](https://www.npmjs.com/package/fetch)
 * [Math.js](https://www.npmjs.com/package/mathjs)
@@ -21,6 +21,7 @@
 * [Request](https://www.npmjs.com/package/request)
 * [Oxford Dictionary API](https://www.npmjs.com/package/oxford-dictionary-api) (Not known to function, used in under development non-functional define command)
 * [urban-dictionary](https://www.npmjs.com/package/urban-dictionary)
+* [jikan-node](https://www.npmjs.com/package/jikan-node)
 * Optional: [Git](https://git-scm.com/downloads)- Git makes everything easier to do with their CLI
 * Optional: [PM2](https://www.npmjs.com/package/pm2)- PM2 will automatically restart the bot when errors happen.
 ## Features 
@@ -37,10 +38,10 @@
 * Some hidden features ;)
 * Urban Dictionary Lookup
 * Clear Chat
+* MyAnimeList Search (Manga, Anime)
 ## Under Development/Possible Future Features
 * **ETA August Features:**
   * Blacklist (Priority)
-  * MyAnimeList Search (Priority)
   * Translate
   * Food/Recipe Lookup
     * Nutrition, full recipes
