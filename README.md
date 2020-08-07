@@ -41,6 +41,7 @@
 * MyAnimeList Search (Manga, Anime)
 ## Under Development/Possible Future Features
 * **ETA August Features:**
+  * Modulizing the entire bot (Priority)
   * Blacklist (Priority)
   * Translate
   * Food/Recipe Lookup
