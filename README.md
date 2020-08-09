@@ -43,13 +43,14 @@
 * **ETA August Features:**
   * Modulizing the entire bot (Priority)
   * Blacklist (Priority)
+  * Select random from list
   * Translate
   * Food/Recipe Lookup
     * Nutrition, full recipes
   * Stock market viewer
   * Polling/Voting
-  * Russian Roulette
 * **No ETA Features**
+  * Russian Roulette
   * Fighting Game
   * Dictionary Command
 * **Possible Future Features**
@@ -62,8 +63,11 @@
     * Slots
 * **Abandoned Features**
   * Google Search/Image Search
+    * Might revist, but using Google's search results is difficult
   * GC Music Bot
+    * Simply not possible
   * Google Assistant API
+    * Kinda weird not worth the effort
   * Gify/Tenor GIFs
     * Both desktop and mobile versions of discord now support this in client.
 ## A server only tailored version of Jenna is under development- With all GC features + more
