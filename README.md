@@ -6,10 +6,6 @@
 * Created by jam#3515 or jamxu88 on github
 * Lightweight, easy to host and setup
   * Est. Max Memory usage- 90MiB
-    * Heap Size- ~40 MiB
-    * Heap Usage- ~85%
-    * Includes cache
-  * Idle- 30 MiB
 * Made in Discord.js
 ## Dependencies
 * [NodeJS and NPM](https://nodejs.org/en/) (Distrubuted Together)
