@@ -62,7 +62,7 @@ client.on("message", (message) => {
             },
             "color": 16761035,
             "footer": {
-              "text": "Jenna was last updated 8/5/2020 (currently active project)"
+              "text": "Jenna was last updated 8/20/2020 (currently active project)"
             },
             "thumbnail": "https://cdn.discordapp.com/attachments/729757758332862535/737422906774126663/03387e22311e8dab20cd3eb23f212283_1.png",
             "fields": [
@@ -78,12 +78,12 @@ client.on("message", (message) => {
               },
               {
                 "name": "Know a bug?",
-                "value": "DM jam#3515, join the Testnet Server, or open an issue on the Github page.",
+                "value": "Report it with the command **report bug [bug]**, DM jam#3515, or open an issue on the Github page. Bug abuse will result in a ban from using the bot.",
                 "inline": false
               },
               {
                 "name": "Under Development",
-                "value": "**ETA August Features:**\n - Blacklisting \n- Food/Recipe Lookup \n- Nutrition, full recipes \n- Stock market viewer \n- Polling \n- Russian Roulette  \n**No ETA Features** \n- Fighting Game \n- Dictionary Command \n- MyAnimeList Search \n- Gify/Tenor GIFs  \n**Possible Future Features** \n- Chess \n- Gambling Commands  \n\nAll features are subject to abandonment on the group chat version of Jenna",
+                "value": "**ETA August Features:**\n - Blacklisting \n- Food/Recipe Lookup \n- Nutrition, full recipes \n- Stock market viewer \n- Polling \n- Russian Roulette  \n**No ETA Features** \n- Fighting Game \n- Dictionary Command \n- Gify/Tenor GIFs  \n**Possible Future Features** \n- Chess \n- Gambling Commands  \n\nAll features are subject to abandonment on the group chat version of Jenna",
                 "inline": true
               },
               {
@@ -309,6 +309,7 @@ client.on("message", (message) => {
                 }
         })
     }else
+
     //STILL under development fighting game-------------------
 	if(message.content.toLowerCase().startsWith("fight")) { return;
         var accepted = 0
