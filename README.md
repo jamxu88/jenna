@@ -67,6 +67,8 @@
     * Kinda weird not worth the effort
   * Gify/Tenor GIFs
     * Both desktop and mobile versions of discord now support this in client.
+## Development will begin to slow down on 8/31/2020. Jenna for GC will begin to close up and be set for final release in Q1 2021.
+## Jenna for Servers will begin development right after and a beta version will be available.
 ## A server only tailored version of Jenna is under development- With all GC features + more
 ### Beta ETA: 2021 Q1
 * This will only be the beta version of Jenna for Servers. It will only have a few basic server-only features upon first release.
