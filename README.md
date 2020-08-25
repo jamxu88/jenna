@@ -37,7 +37,7 @@
 * Clear Chat
 * MyAnimeList Search (Manga, Anime)
 ## Under Development/Possible Future Features
-* **ETA August Features:**
+* **ETA September Features:**
   * Modulizing the entire bot (Priority)
   * Blacklist (Priority)
   * Select random from list
