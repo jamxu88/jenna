@@ -7,6 +7,7 @@ var Dictionary = require("oxford-dictionary-api");
 const jconfig = require('./jconfig.json');
 var cheerio = require("cheerio");
 var request = require("request")
+var fs = require(`fs`);
 const urbandictionary = require("urban-dictionary")
 const Jikan = require('jikan-node');
 const mal = new Jikan();
@@ -50,6 +51,27 @@ client.on("message", (message) => {
             message.channel.send({embed:{ color: 16761035, description: data }})
         });
     }else
+    if (message.content.toLowerCase().startsWith("condense")) {
+        function download(url) {
+            request.get(url)
+                .on('error', console.error)
+                .pipe(fs.createWriteStream('message.txt'));
+        }
+        function parse(file) {
+            fs.readFile(file, 'utf8', (err, data) => {
+                if (err) throw err;
+                console.log("read")
+                console.log(data);
+            });
+        }
+        if(message.attachments.first()) {
+            if(message.attachments.first().filename === `message.txt`) {
+                console.log("recieved")
+                download(message.attachments.first().url)
+                parse('message.txt')
+            }
+        }
+    }else
     //Help Command-------------------
     if (message.content.toLowerCase().startsWith("jhelp")) {
         message.channel.send({embed:
@@ -62,13 +84,13 @@ client.on("message", (message) => {
             },
             "color": 16761035,
             "footer": {
-              "text": "Jenna was last updated 8/24/2020 (currently active project)"
+              "text": "Jenna was last updated 8/20/2020 (currently active project)"
             },
             "thumbnail": "https://cdn.discordapp.com/attachments/729757758332862535/737422906774126663/03387e22311e8dab20cd3eb23f212283_1.png",
             "fields": [
               {
                 "name": "Changelog",
-                "value": "- Edited the help command \n- Fixed some typos \n- Changed the Ping Command \n- Misc. Hotfixes",
+                "value": "- Edited the help command \n- Fixed some typos \n- Added Manga & Anime Search \n- Misc. Hotfixes",
                 "inline": false
               },
               {
@@ -78,7 +100,7 @@ client.on("message", (message) => {
               },
               {
                 "name": "Know a bug?",
-                "value": "DM jam#3515, or open an issue on the Github page. Bug abuse will result in a ban from using the bot.",
+                "value": "Report it with the command **report bug [bug]**, DM jam#3515, or open an issue on the Github page. Bug abuse will result in a ban from using the bot.",
                 "inline": false
               },
               {
@@ -104,11 +126,18 @@ client.on("message", (message) => {
     if (message.content.toLowerCase().startsWith("jping") || message.isMemberMentioned(client.user)) {
         message.channel.send({ embed: { color: 16761035, description: "Pong! Response Time: `" + (new Date().getTime() - message.createdTimestamp) + "` ms(This doesn't matter)" } });
     }else
+    if (message.content.toLowerCase().startsWith("new anime search")) {
+        search = message.content.slice(17)
+        search = search.replace(/ /g,"%20")
+        message.channel.send({ embed: { color: 16761035, description: `https://myanimelist.net/search/all?q=${search}&cat=all` } });
+    }else
     //Urban Dictionary-------------------
     if (message.content.toLowerCase().startsWith("urban")) {
-        def = message.content.split(" ")
-        if (!def[1]) {message.channel.send("that's not how this works."); return;}
-        urbandictionary.term(def[1], (error,entries,tags,sounds) => {
+        def = message.content.slice(6)
+        def = def.replace(/ /g,"+")
+        console.log(def)
+        if (!def) {message.channel.send("that's not how this works."); return;}
+        urbandictionary.term(def, (error,entries,tags,sounds) => {
             if (error) {
                 message.channel.send({ embed: { color: 16761035, description: `Something went wrong: ${error}` } })
             }else {
@@ -138,10 +167,19 @@ client.on("message", (message) => {
             message.channel.send("You need to specify at least 3 letters to search.")
             return;
         }
+        message.channel.send({ embed: { color: 16761035, description: "Searching... This may take a few moments. If there is no response, there is an API error." } })
+        .then(msg => {
+            msg.delete(3000)
+          })
+          .catch(console.error);
         mal.search("anime",message.content,1)
             .then(info => {
+                console.log(info)
                 if (!info.results[0].end_date) {info.results[0].end_date = "Unknown"}
                 if (!info.results[0].start_date) {info.results[0].start_date = "Unknown"}
+                if (info == "Response: 503") {
+                    message.channel.send("API error. Please try again later."); return
+                }else
                 message.channel.send({"embed": {
                 "title": info.results[0].title.toString(),
                 "description": info.results[0].synopsis,
@@ -308,9 +346,13 @@ client.on("message", (message) => {
                 }
         })
     }else
-
+    if (message.content.toLowerCase().startsWith("report bug")) {
+        message.content = message.content.slice(10)
+        message.channel.send("Bug report sent along with your ID. Abuse of the report system will result in a blacklist from using the bot.")
+        client.channels.get(jconfig.bugReportChannel).send(`Bug report from user ID ${message.author.id}: `+message.content)
+    }else
     //STILL under development fighting game-------------------
-	if(message.content.toLowerCase().startsWith("fight")) { return;
+	if(message.content.toLowerCase().startsWith("fight")) { 
         var accepted = 0
         message.content = message.content.slice(6)
         player1 = message.author
