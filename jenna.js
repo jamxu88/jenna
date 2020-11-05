@@ -131,6 +131,65 @@ client.on("message", (message) => {
         search = search.replace(/ /g,"%20")
         message.channel.send({ embed: { color: 16761035, description: `https://myanimelist.net/search/all?q=${search}&cat=all` } });
     }else
+    if(message.content.toLowerCase() == "jenna bio") {
+        message.channel.send({
+            "embed": {
+              "title": "Jenna Jinkō (人工ジェンナ)",
+              "color": 16761035,
+              "description": "A Discord Bot created by Jam#3515, written in Javascript, Typescript, and Python. Jenna was originally created as a Self-Bot for a group chat, but later became a full-scale server bot.",
+              "image": {
+                "url": "https://cdn.discordapp.com/attachments/729757758332862535/737422906774126663/03387e22311e8dab20cd3eb23f212283_1.png"
+              },
+              "fields": [
+                {
+                  "name": "Age",
+                  "value": "???",
+                  "inline": true
+                },
+                {
+                  "name": "Height",
+                  "value": "157.48 cm",
+                  "inline": true
+                },
+                {
+                  "name": "Weight",
+                  "value": "43 kg",
+                  "inline": true
+                },
+                {
+                  "name": "Birthday",
+                  "value": "February 23",
+                  "inline": true
+                },
+                {
+                  "name": "Fav. Food",
+                  "value": "Matcha Ice Cream",
+                  "inline": true
+                },
+                {
+                  "name": "Blood Type",
+                  "value": "AB",
+                  "inline": true
+                },
+                {
+                  "name": "Talent",
+                  "value": "Never Sleeps",
+                  "inline": true
+                },
+                {
+                  "name": "Fav. Programming Lang.",
+                  "value": "Javascript <3",
+                  "inline": true
+                },
+                {
+                  "name": "Language",
+                  "value": "English",
+                  "inline": true
+                }
+              ]
+            }
+          })
+    }
     //Urban Dictionary-------------------
     if (message.content.toLowerCase().startsWith("urban")) {
         def = message.content.slice(6)
@@ -159,6 +218,9 @@ client.on("message", (message) => {
     //Github Page
     if (message.content.toLowerCase().startsWith("jenna code")) {
         message.channel.send({ embed: { color: 16761035, description: "Jenna's Source Code- https://jamesxu.dev/jenna" } });
+    }else
+    if (message.content.toLowerCase().startsWith("thanks jenna")) {
+      message.channel.send("Np! <3");
     }else
     //Anime Search-------------------
     if (message.content.toLowerCase().startsWith("anime search")) {
