@@ -1,6 +1,5 @@
 # Jenna
-![Not my art lol](https://cdn.discordapp.com/attachments/729757758332862535/737422906774126663/03387e22311e8dab20cd3eb23f212283_1.png)
-* [Link to artwork](https://www.pinterest.com/pin/629870697860898632/?nic_v1=1a2e%2Bc%2F8ybPI%2B6IHEwuxBwDXGMn2MUvzKt5a6CCAagOFO3Zz%2BgWykMAID0rvU82eo2)
+![Not my art lol](https://cdn.discordapp.com/attachments/629497664265912343/800948361628090378/120406916_768995770344557_6535415149001009487_n.jpg)
 #### The Ultimate Extensive Discord Bot tailored to Self-Botting and Group Chats
 * Updated Regularly- Latest Release: 8/25/2020
 * Created by jam#3515 or jamxu88 on github
