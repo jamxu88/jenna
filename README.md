@@ -1,6 +1,6 @@
 # Jenna
 ## This repository is not maintained and no longer works with Discord as of 01/21/22.
-![Not my art lol](https://cdn.discordapp.com/attachments/629497664265912343/800948361628090378/120406916_768995770344557_6535415149001009487_n.jpg)
+
 #### The Ultimate Extensive Discord Bot tailored to Self-Botting and Group Chats
 * Updated Regularly- Latest Release: 8/25/2020
 * Created by jam#3515 or jamxu88 on github
