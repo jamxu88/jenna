@@ -120,10 +120,4 @@
 * [Heroku](https://www.heroku.com/) Offers a free 550 hours of hosting per month for your node apps and 1000 hours if you connect a card to your account.
 * [Tutorial](https://www.youtube.com/watch?v=24zueyPoHMQ)
 * **And you're done!**
-#
-# Donations are non-refundable, greatly appreciated, and help let this project continue
-### BTC: 1NKwF3n4tcyzE5zDhjJSfp13nBN7cHEwsU
-### ETH: 0x6727B85FD3978a493BC19EA0a456B3a9Ddc290eF
-### DASH: XebAktYUUhf8BzmK5uFDbfQ6nqbeHG3DSz
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=JPF6A3T7URF34&item_name=Buy+me+a+coffee+and+support+the+development+of+Jenna&currency_code=USD&source=url)
-### Patreon: Coming Soon (with benifits)
+
